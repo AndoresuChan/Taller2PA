@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Biblioteca {
     private List<Libro> inventario;
@@ -27,11 +28,9 @@ public class Biblioteca {
 
     public void mostrarLibrosDisponibles() {
         System.out.println("Libros disponibles en la biblioteca:");
-        for (int i = 0; i < inventario.size(); i++) {
-            if (inventario.get(i).getEjemplaresDisponibles() > 0) {
-                System.out.println(i + ". " + inventario.get(i).getTitulo());
-            }
-        }
+        IntStream.range(0, inventario.size())
+                .filter(i -> inventario.get(i).getEjemplaresDisponibles() > 0)
+                .forEach(i -> System.out.println(i + ". " + inventario.get(i).getTitulo()));
     }
 
     public int getNumeroLibros() {
