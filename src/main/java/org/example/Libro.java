@@ -27,16 +27,8 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
-        return autor;
-    }
-
     public void setAutor(String autor) {
         this.autor = autor;
-    }
-
-    public String getCategoria() {
-        return categoria;
     }
 
     public void setCategoria(String categoria) {

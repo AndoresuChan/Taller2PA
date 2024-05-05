@@ -20,8 +20,7 @@ public class MenuAdministrador {
             System.out.println("1. Agregar libro");
             System.out.println("2. Modificar libro");
             System.out.println("3. Eliminar libro");
-            System.out.println("4. Eliminar usuario");
-            System.out.println("5. Volver al menú principal");
+            System.out.println("4. Volver al menú principal");
             System.out.print("Selecciona una opción: ");
             opcion = scanner.nextInt();
 
@@ -36,9 +35,6 @@ public class MenuAdministrador {
                     eliminarLibro();
                     break;
                 case 4:
-                    eliminarUsuario();
-                    break;
-                case 5:
                     System.out.println("Volviendo al menú principal...");
                     break;
                 default:
@@ -46,7 +42,7 @@ public class MenuAdministrador {
                     break;
             }
 
-        } while (opcion != 5);
+        } while (opcion != 4);
     }
 
     private void agregarLibro() {

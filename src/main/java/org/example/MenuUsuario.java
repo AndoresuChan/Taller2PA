@@ -123,11 +123,11 @@ public class MenuUsuario {
     private void agregarCalificacion() {
         System.out.println("\nLibros disponibles:");
         biblioteca.mostrarLibrosDisponibles();
-        System.out.print("Selecciona el índice del libro al que quieres agregar una calificación: ");
+        System.out.print("Selecciona el indice del libro al que quieres agregar una calificacion: ");
         int indiceLibro = scanner.nextInt();
         if (indiceLibro >= 0 && indiceLibro < biblioteca.getNumeroLibros()) {
             Libro libro = biblioteca.getLibroPorIndice(indiceLibro);
-            System.out.print("Ingrese la calificación (de 1 a 5): ");
+            System.out.print("Ingrese la calificacion (de 1 a 5): ");
             int calificacion = scanner.nextInt();
             if (calificacion >= 1 && calificacion <= 5) {
                 libro.agregarCalificacion(calificacion);
@@ -158,7 +158,7 @@ public class MenuUsuario {
     private void verComentarios() {
         System.out.println("\nLibros disponibles:");
         biblioteca.mostrarLibrosDisponibles();
-        System.out.print("Selecciona el índice del libro del que quieres ver los comentarios: ");
+        System.out.print("Selecciona el indice del libro del que quieres ver los comentarios: ");
         int indiceLibro = scanner.nextInt();
         if (indiceLibro >= 0 && indiceLibro < biblioteca.getNumeroLibros()) {
             Libro libro = biblioteca.getLibroPorIndice(indiceLibro);
@@ -167,7 +167,7 @@ public class MenuUsuario {
                 System.out.println("- " + comentario);
             }
         } else {
-            System.out.println("Índice inválido");
+            System.out.println("(Indice invalido");
         }
     }
 }

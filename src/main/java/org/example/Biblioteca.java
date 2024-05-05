@@ -13,7 +13,6 @@ public class Biblioteca {
         this.usuarios = new ArrayList<>();
     }
 
-    // Métodos para gestionar libros
     public void agregarLibro(Libro libro) {
         inventario.add(libro);
     }
@@ -37,10 +36,6 @@ public class Biblioteca {
         return inventario.size();
     }
 
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
-
     public Libro getLibroPorIndice(int indice) {
         if (indice >= 0 && indice < inventario.size()) {
             return inventario.get(indice);
@@ -49,25 +44,6 @@ public class Biblioteca {
         }
     }
 
-    // Métodos para gestionar usuarios
-    public void agregarUsuario(Usuario usuario) {
-        usuarios.add(usuario);
-    }
-
-    public void eliminarUsuario(Usuario usuario) {
-        usuarios.remove(usuario);
-    }
-
-    public Usuario getUsuarioPorNombre(String nombre) {
-        for (Usuario usuario : usuarios) {
-            if (usuario.getNombre().equalsIgnoreCase(nombre)) {
-                return usuario;
-            }
-        }
-        return null;
-    }
-
-    // Métodos para prestar y devolver libros
     public void prestarLibro(Libro libro, Usuario usuario) {
         if (libro.getEjemplaresDisponibles() > 0) {
             libro.decrementarEjemplaresDisponibles();
