@@ -67,4 +67,11 @@ public class Libro {
         ejemplaresDisponibles++;
     }
 
+    public List<Integer> getCalificaciones() {
+        return calificaciones;
+    }
+    public List<String> getComentarios() {
+        return comentarios;
+    }
+
 }

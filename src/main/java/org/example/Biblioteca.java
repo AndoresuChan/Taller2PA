@@ -37,6 +37,10 @@ public class Biblioteca {
         return inventario.size();
     }
 
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
     public Libro getLibroPorIndice(int indice) {
         if (indice >= 0 && indice < inventario.size()) {
             return inventario.get(indice);
@@ -56,7 +60,7 @@ public class Biblioteca {
 
     public Usuario getUsuarioPorNombre(String nombre) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getNombre().equals(nombre)) {
+            if (usuario.getNombre().equalsIgnoreCase(nombre)) {
                 return usuario;
             }
         }

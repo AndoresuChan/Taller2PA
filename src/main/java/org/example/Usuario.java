@@ -27,12 +27,8 @@ public class Usuario {
             librosReservados.add(libro);
             System.out.println("Reserva realizada para " + libro.getTitulo());
         } else {
-            System.out.println("El libro ya está disponible. No se puede reservar.");
+            System.out.println("El libro ya esta disponible o fue prestado. No se puede reservar.");
         }
-    }
-
-    public void agregarCalificacion(int calificacion) {
-        calificaciones.add(calificacion);
     }
 
     public void removerPrestamo(Libro libro) {

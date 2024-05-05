@@ -125,19 +125,6 @@ public class MenuAdministrador {
         }
     }
 
-    private void eliminarUsuario() {
-        scanner.nextLine();
-        System.out.print("Ingrese el nombre del usuario que desea eliminar: ");
-        String nombreUsuario = scanner.nextLine();
-        Usuario usuario = biblioteca.getUsuarioPorNombre(nombreUsuario);
-        if (usuario != null) {
-            biblioteca.eliminarUsuario(usuario);
-            System.out.println("Usuario eliminado exitosamente");
-        } else {
-            System.out.println("El usuario no existe");
-        }
-    }
-
     private Libro buscarLibroPorTitulo(String titulo) {
         for (Libro libro : biblioteca.getInventario()) {
             if (libro.getTitulo().equalsIgnoreCase(titulo)) {
